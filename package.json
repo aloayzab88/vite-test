@@ -1,0 +1,39 @@
+{
+  "name": "vituum-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-postcss": "^1.1.0",
+    "@vituum/vite-plugin-pug": "^1.1.0",
+    "autoprefixer": "^10.4.20",
+    "jquery": "^3.7.1",
+    "jquery-validation": "^1.21.0",
+    "postcss": "^8.4.41",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.77.8",
+    "vite": "^5.4.1",
+    "vituum": "^1.1.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Edge versions",
+    "last 2 Firefox versions",
+    "last 2 Safari major versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 FirefoxAndroid versions",
+    "last 2 and_chr versions",
+    "last 2 ios_saf major versions"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-sort-media-queries": {}
+    }
+  }
+}

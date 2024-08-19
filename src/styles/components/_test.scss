@@ -1,0 +1,17 @@
+:root {
+    --font-poppins: 'Poppins';
+    --font-bree: 'Bree Serif';
+}
+
+body {
+    font-family: var(--font-poppins);
+    color: red;
+
+    @media (width >=600px) {
+        color: blue;
+    }
+
+    @media (width <=1000px) {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,6 @@
+@use '../tools/font-face' as *;
+
+@include font-face('Poppins', 'poppins-regular', 400);
+@include font-face('Poppins', 'poppins-semibold', 600);
+@include font-face('Poppins', 'poppins-bold', 700);
+@include font-face('Bree Serif', 'bree-serif-regular', 400);

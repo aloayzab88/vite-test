@@ -1,0 +1,13 @@
+extends ../layouts/general
+
+block main
+    main
+        h1 Index
+        form.form(action='./', method='post')
+            input(type='text', placeholder='some text', required)
+            button(type='submit') Enviar
+        form.form2(action='./', method='post')
+            input(type='text', required)
+            button(type='submit') Enviar
+        img(src='/src/assets/gatos/cat-blue.jpg', alt='')
+        img(src='/images/orange-cat.jpg', alt='')

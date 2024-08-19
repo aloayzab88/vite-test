@@ -1,0 +1,19 @@
+@use './generic/font-face';
+@use './components/test';
+
+h1 {
+    color: green;
+    backdrop-filter: blur(2px);
+    @media (width >=600px) {
+        color: cyan;
+    }
+    @media (width <= 1000px) {
+        font-weight: bold;
+    }
+}
+
+
+input::placeholder {
+    color: green;
+    font-weight: bold;
+}

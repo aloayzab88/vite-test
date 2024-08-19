@@ -1,0 +1,5 @@
+import './jquery-test-dom.js'
+import './jquery-test.js'
+import './jquery-validaiton-test.js'
+import './jquery-validaiton-test2.js'
+import './test.js'
