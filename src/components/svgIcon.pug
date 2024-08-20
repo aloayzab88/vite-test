@@ -1,0 +1,5 @@
+mixin svgIcon(icon, clas, hidden='true', title)
+    svg.o-icon(class=clas, aria-hidden=(hidden == 'true' ? 'true' : false), focusable='false', role='img')
+        if title
+            title=title 
+        use(href='/images/icons/icons.svg#icon-'+icon)

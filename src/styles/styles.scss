@@ -1,6 +1,19 @@
 @use './generic/font-face';
 @use './components/test';
 
+* {
+    box-sizing: border-box;
+}
+
+.o-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
 h1 {
     color: green;
     backdrop-filter: blur(2px);
@@ -16,4 +29,8 @@ h1 {
 input::placeholder {
     color: green;
     font-weight: bold;
+}
+
+body {
+    background-image: url('/images/orange-cat.jpg');
 }
