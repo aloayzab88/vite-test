@@ -1,11 +1,13 @@
 import vituum from 'vituum';
 import pug from '@vituum/vite-plugin-pug';
+import { adjustHtmlPathsPlugin } from './adjustHtmlPathsPlugin';
 
 export default {
     base: './',
     plugins: [
         vituum({pages: {normalizeBasePath: true}}),
-        pug({options : {pretty: true}})
+        pug({options : {pretty: true}}),
+        adjustHtmlPathsPlugin('dist')
     ],
     build: {
         rollupOptions: {
