@@ -18,7 +18,7 @@ h1 {
     color: green;
     backdrop-filter: blur(2px);
     @media (width >=600px) {
-        color: cyan;
+        color: red;
     }
     @media (width <= 1000px) {
         font-weight: bold;
@@ -33,4 +33,10 @@ input::placeholder {
 
 body {
     background-image: url('/images/orange-cat.jpg');
+}
+
+body {
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 0 #000;
+    user-select: none;
 }

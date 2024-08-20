@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "webp": "gulp toWebp",
+    "svgs": "gulp svgs",
+    "icons": "gulp icons"
   },
   "devDependencies": {
-    "@vituum/vite-plugin-postcss": "^1.1.0",
     "@vituum/vite-plugin-pug": "^1.1.0",
     "autoprefixer": "^10.4.20",
     "gulp": "^5.0.0",
