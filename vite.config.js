@@ -2,8 +2,13 @@ import vituum from 'vituum';
 import pug from '@vituum/vite-plugin-pug';
 
 export default {
+    base: './',
     plugins: [
-        vituum(),
+        vituum({
+            pages: {
+                normalizeBasePath: true
+            }
+        }),
         pug({
             options : {
                 pretty: true
@@ -12,6 +17,7 @@ export default {
     ],
     build: {
         rollupOptions: {
+            input: ['./src/pages/**/*.pug'],
             output: {
                 assetFileNames: (assetInfo) => {
                     let extType = assetInfo.name.split('.').pop();
