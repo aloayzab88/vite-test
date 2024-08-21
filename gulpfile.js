@@ -9,15 +9,15 @@ import cheerio from 'gulp-cheerio';
 const paths = {
     images: {
         src: 'src/assets/images/**/*.{png,jpg}',
-        dest: 'public/images/'
+        dest: 'src/assets/images/'
     },
     svgs: {
         src: 'src/assets/images/**/*.svg',
-        dest: 'public/images/'
+        dest: 'src/assets/images/'
     },
     svgIcons: {
         src: 'src/assets/icons/**/*.svg',
-        dest: 'public/images/icons/'
+        dest: 'src/assets/images/'
     }
 };
 
@@ -67,6 +67,6 @@ export function watchFiles() {
 }
 
 export default gulp.series(
-    gulp.parallel(toWebp, svgs, icons),
+    gulp.parallel(toWebp, icons),
     watchFiles
 );

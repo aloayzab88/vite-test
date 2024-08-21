@@ -1,0 +1,103 @@
+/* some takes from https: //piccalil.li/blog/a-more-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    color: var(--color-black);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    &:where(.is-loading, .is-resizing) * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+body {
+    min-height: 100svh;
+    line-height: 1.5;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+}
+
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+picture,
+img {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+select {
+    background-image: url('../images/components/inputs/icon-chevron-down.svg');
+    cursor: pointer;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+[tabindex='-1'] {
+    scroll-margin-top: 10rem;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

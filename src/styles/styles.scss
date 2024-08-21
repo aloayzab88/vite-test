@@ -1,4 +1,5 @@
 @use './generic/font-face';
+@use './components/page';
 @use './components/test';
 @use './components/test2';
 
@@ -33,7 +34,7 @@ input::placeholder {
 }
 
 body {
-    background-image: url('/images/orange-cat.jpg');
+    background-image: url('/src/assets/images/cats/Cat_August_2010-4.webp');
 }
 
 body {
