@@ -23,7 +23,10 @@ const paths = {
 
 export function toWebp() {
     return gulp.src(paths.images.src, { encoding: false })
-        .pipe(newer(paths.images.dest))
+        .pipe(newer({
+            dest: paths.images.dest,
+            ext: '.webp'
+        }))
         .pipe(webp({
             alphaQuality: 85,
             quality: 85

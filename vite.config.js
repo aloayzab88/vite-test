@@ -33,6 +33,7 @@ export default {
         adjustHtmlPathsPlugin('dist')
     ],
     build: {
+        assetsInlineLimit: 0,
         rollupOptions: {
             output: {
                 assetFileNames: getAssetFileName,
