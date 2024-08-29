@@ -1,24 +1,10 @@
 import vituum from 'vituum';
 import pug from '@vituum/vite-plugin-pug';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-import { adjustHtmlPathsPlugin } from './adjustHtmlPathsPlugin';
+//import { adjustHtmlPathsPlugin } from './plugins/adjustHtmlPathsPlugin';
+import vitePugToPhp from './plugins/vitePugToPhp.js';
+import { getAssetFileName } from './plugins/assetFileNames.js';
 
-const getAssetFileName = (assetInfo) => {
-    const extType = assetInfo.name.split('.').pop();
-    if (assetInfo.originalFileName) {
-        const relativePath = assetInfo.originalFileName.replace(/^src\//, '');
-        if (!/css|js/i.test(extType)) {
-            return `${relativePath}`;
-        }
-    }
-    if (/css/i.test(extType)) {
-        return 'assets/styles/[name][extname]';
-    }
-    if (/js/i.test(extType)) {
-        return 'assets/scripts/[name][extname]';
-    }
-    return `assets/[name][extname]`;
-};
 
 export default {
     base: './',
@@ -30,7 +16,8 @@ export default {
             cache: true,
             cacheLocation: 'node_modules/.cache/image-optimizer'
         }),
-        adjustHtmlPathsPlugin('dist')
+        //adjustHtmlPathsPlugin('dist'),
+        vitePugToPhp('dist')
     ],
     build: {
         assetsInlineLimit: 0,

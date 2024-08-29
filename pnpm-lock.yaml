@@ -50,6 +50,9 @@ importers:
       postcss-sort-media-queries:
         specifier: ^5.2.0
         version: 5.2.0(postcss@8.4.41)
+      pug:
+        specifier: ^3.0.3
+        version: 3.0.3
       sass:
         specifier: ^1.77.8
         version: 1.77.8
