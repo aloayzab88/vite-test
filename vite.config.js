@@ -1,9 +1,9 @@
 import vituum from 'vituum';
 import pug from '@vituum/vite-plugin-pug';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-//import { adjustHtmlPathsPlugin } from './plugins/adjustHtmlPathsPlugin';
+//import adjustHtmlPathsPlugin from './plugins/adjustHtmlPathsPlugin';
 import vitePugToPhp from './plugins/vitePugToPhp.js';
-import { getAssetFileName } from './plugins/assetFileNames.js';
+import getAssetFileName from './plugins/assetFileNames.js';
 
 
 export default {

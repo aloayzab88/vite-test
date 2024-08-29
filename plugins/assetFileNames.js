@@ -1,4 +1,4 @@
-export const getAssetFileName = (assetInfo) => {
+export default function getAssetFileName(assetInfo) {
     const extType = assetInfo.name.split('.').pop();
     if (assetInfo.originalFileName) {
         const relativePath = assetInfo.originalFileName.replace(/^src\//, '');

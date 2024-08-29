@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export function adjustHtmlPathsPlugin(baseDir) {
+export default function adjustHtmlPathsPlugin(baseDir) {
   return {
     name: 'post-process-html',
     apply: 'build',
